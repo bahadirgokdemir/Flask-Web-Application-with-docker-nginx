@@ -1,0 +1,50 @@
+version: '3.3'
+
+services:
+  flask-app:
+    container_name: flask_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DB_URL=postgresql://bahadr:password@flask_db:5432/flask_p
+      - FLASK_APP=Flask.py
+    depends_on:
+      - flask_db
+
+  flask_db:
+    container_name: flask_db
+    image: postgres:13.2
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=flask_p
+      - POSTGRES_USER=bahadr
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  modsecurity:
+    container_name: modsecurity
+    image: owasp/modsecurity:nginx
+    volumes:
+      - ./nginx/modsecurity/modsecurity.conf:/etc/modsecurity/modsecurity.conf:ro
+      - ./nginx/modsecurity/rules:/etc/modsecurity/rules:ro
+    
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: flask_nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro 
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - ./nginx/modsecurity/modsecurity.conf:/etc/nginx/modsecurity/modsecurity.conf:ro
+      - ./nginx/modsecurity/rules:/etc/nginx/modsecurity/rules:ro 
+    ports:
+      - "80:80"
+      - "443:443" 
+    depends_on:
+      - modsecurity
+volumes:
+  pgdata: {}

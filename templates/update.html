@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER UPDATİNG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 45px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Update</h1>
+    <form method="POST" action="">
+        <label for="username">User Name</label>
+        <input type="text" id="username" name="username" value="{{ user.username }}" required>
+        
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" value="{{ user.firstname }}" required>
+        
+        <label for="middlename">Middle Name</label>
+        <input type="text" id="middlename" name="middlename" value="{{ user.middlename }}">
+        
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" value="{{ user.lastname }}" required>
+        
+        <label for="birthdate">Birthdate</label>
+        <input type="date" id="birthdate" name="birthdate" value="{{ user.birthdate }}" required>
+        
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" value="{{ user.email }}" required>
+
+        <label for="password">New Password</label>
+        <input type="password" id="password" name="password"  pattern="(?=.*\d)(?=.*[\W_]).{8,}"  title="Minimum of 8 characters. Should have at least one special character and one number."  placeholder="Yeni şifrenizi girin">
+
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" pattern="(?=.*\d)(?=.*[\W_]).{8,}"  title="Minimum of 8 characters. Should have at least one special character and one number."  placeholder="Şifrenizi onaylayın">
+        
+        <button href="login" type="submit">Update</button>
+    </form>
+</body>
+</html>

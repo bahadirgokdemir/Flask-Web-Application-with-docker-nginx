@@ -1,0 +1,59 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 686-663-677
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 686-663-677
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:33:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:33:59] "GET /update_user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:34:02] "GET /user_action HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:34:04] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:34:41] "[32mPOST /signup HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:34:41] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:35:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:35:01] "GET /welcome/bahadr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:35:06] "[32mPOST /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:35:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:41:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:41:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:41:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Sep/2023 10:49:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.201 - - [13/Sep/2023 11:09:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.0.201 - - [13/Sep/2023 11:09:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.201 - - [13/Sep/2023 17:01:05] "GET / HTTP/1.1" 200 -
